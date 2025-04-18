@@ -1,6 +1,7 @@
 import json
 import os
 from textwrap import dedent
+
 import pandas as pd
 from tqdm import tqdm
 
@@ -8,10 +9,10 @@ tqdm.pandas()
 
 import yaml
 from langchain.output_parsers import PydanticOutputParser
+from langchain_community.vectorstores import FAISS
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_openai import ChatOpenAI, OpenAIEmbeddings
-from langchain_community.vectorstores import FAISS
 from pydantic import BaseModel, Field, RootModel
 
 
